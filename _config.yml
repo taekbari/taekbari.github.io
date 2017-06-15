@@ -1,25 +1,93 @@
-# Site settings
-title: Clean Blog
-header-img: img/home-bg.jpg
-email: taekbari157@gmail.com
-copyright_name: Your/Project/Corporate Name
-description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: ""
-url: "http://taekbari.github.io"
-twitter_username: SBootstrap
-github_username:  taekbari
-facebook_username:  StartBootstrap
-email_username:  taekbari157@gmail.com
+# # # # # # # # # # # # #
+#   K i k o - p l u s   #
+# # # # # # # # # # # # #
 
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
+# Basic
+name:               "taekbari's blog"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+author:
+  # facebook:         your-id
+  # youtubeUser:      your-id
+  # youtubeChannel:   your-id
+  # twitter:          your-id
+  github:           taekbari
+  # stackoverflow:    your-id
+  # quora:            your-id
+  # linkedin:         your-id
+  # pinterest:        your-id
+  # googlePlus:       your-id
+  # instagram:        your-id
+  # reddit:           your-id
+  # medium:           your-id
+  # tumblr:           your-id
+  email:            taekbari157@gmail.com
 
-gems: [jekyll-paginate, jekyll-feed]
+copyright:
+  year:             2017
+  name:             taekbari
+
+# Google-analytics
+# google-analytics:
+  # id:               ""
+
+# Disqus
+# disqus:
+  # id:               "kiko-plus"
+
+# URL
+url:                "https://taekbari.github.io" # the base hostname & protocol for your site
+# url:                "http://localhost:4000" # use this url when you develop
+baseurl:            "" # the subpath of your site, e.g. /blog
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           Asia/Seoul
+permalink:          /:year-:month-:day/:title/
+
+# Pagination
+paginate:           5
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+# Navigation
+nav:
+  - name:           "About"
+    url:            "/about"
+  - name:           "Archive"
+    url:            "/archive"
+  - name:           "Tags"
+    url:            "/tags"
+  - name:           "Github"
+    url:            "https://github.com/taekbari"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  # - jekyll-admin
+
+exclude:            [vendor]
